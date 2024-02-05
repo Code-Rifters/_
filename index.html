@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -9,11 +9,17 @@
     <body onload="requestFullscreen()">
         <style>
             body {
+                margin: 0;
+                overflow: hidden;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: cover;
             }
             #Progress {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 width: 100%;
                 background-color: grey;
             }
@@ -26,9 +32,9 @@
                 visibility: hidden;
             }
         </style>
-            <div id="Progress">
-                <div id="Bar"></div>
-            </div>
+        <div id="Progress">
+            <div id="Bar"></div>
+        </div>
         <center>
             <canvas id="jsdos"></canvas>
             <br/>
