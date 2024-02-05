@@ -6,7 +6,7 @@
         <title>Win95</title>
         <script src="js-dos.js"></script>
     </head>
-    <body>
+    <body onload="requestFullscreen()">
         <style>
             body {
                 background-repeat: no-repeat;
@@ -32,7 +32,6 @@
         <center>
             <canvas id="jsdos"></canvas>
             <br/>
-            <button onclick="ci.fullscreen()">Fullscreen</button>
         </center>
         <script>
             Dos(document.getElementById("jsdos"), { autolock: true, onprogress: (stage, total, loaded) => {document.getElementById("Bar").style.width = Math.floor(loaded * 99 / total) + "%"}}).ready((fs, main) => {
